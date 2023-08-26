@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #090221;
+}
+
+.container
+{
+    position: relative;
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.container::after
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 400px;
+    background-image: conic-gradient(#090211,#090221,#00fff2);
+    animation: effect 2s linear infinite;
+}
+
+@keyframes effect 
+{
+    0%
+    {
+        transform: translate(-50%,-50%) rotate(0);
+    }
+    100%
+    {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+.content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 225px;
+    height: 295px;
+    background-color: #090221;
+    z-index: 1;
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    justify-content: space-evenly;
+}
+
+.content h1
+{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+} 
+.content p
+{
+    font-family: 'Source Code Pro', monospace;
+}
+.content a
+{
+    color: orange;
+    font-family: 'Source Code Pro', monospace;
+    text-decoration: none;
+}
