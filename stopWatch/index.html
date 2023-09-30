@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Digital Clock</title>
+</head>
+<body class="bg-slate-900">
+    <div class="main flex flex-col justify-center h-screen w-screen items-center p-4">
+        <div class="clock bg-red-600 text-white h-20 w-60 flex items-center justify-center font-bold text-4xl rounded-2xl" >00:00:00</div>
+        <div class="buttons">
+            <button id="start" class=" bg-white m-7 w-20 rounded-lg font-bold h-8 hover:scale-150  transition-all ease-in disabled:scale-100">Start</button>
+            <button id="stop" class=" bg-white m-7 w-20 rounded-lg font-bold h-8 hover:scale-150 transition-all ease-in">Stop</button>
+            <button id="reset" class=" bg-white m-7 w-20 rounded-lg font-bold h-8 hover:scale-150 transition-all ease-in">Restart</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
