@@ -1,0 +1,53 @@
+:root{
+    --currTheme :#fff;
+    --theme : #09081c;
+}
+
+.change-theme
+{
+    --currTheme : #09081c;
+    --theme : #fff;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main
+{
+    background-color: var(--currTheme);
+    color: var(--theme);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.info
+{
+    text-align: center;
+}
+.svg
+{
+    cursor: pointer;
+    fill: var(--theme);
+    height: 200px;
+    width: 200px;
+}
+
+h1
+{
+    color: var(--theme);
+}
+
+p
+{
+    font-size: 1.25rem;
+    display: block;
+    width: 30vw;
+    margin-top: 20px;
+}
