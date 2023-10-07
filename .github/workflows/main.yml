@@ -17,4 +17,9 @@ jobs:
         env:
           API_KEY: ${{ secrets.API_KEY }}
         run: |
-     
+          # Example: Build your React app
+          npm install
+          npm run build
+
+          # Deploy using the API key
+          deploy-script.sh $API_KEY
