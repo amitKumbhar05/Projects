@@ -1,24 +1,25 @@
-name: Action 
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
 jobs:
-  Explore-GitHub-Actions:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
       - name: Checkout Repository
         uses: actions/checkout@v2
 
       - name: Build and Deploy
         env:
-          REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }
+          REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
         run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+          # Example: Build your React app
+          npm install
+          npm run build
+
+          # Deploy using the API key
+          deploy-script.sh $REACT_APP_API_KEY
