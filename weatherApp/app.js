@@ -1,5 +1,6 @@
-const api_key = '997c11233d4b00bea78a47d69e09c75a';
-let city = 'pune';
+import obj from "./fig.js";
+
+const api_key = obj.apiKey;
 
 const temp = document.querySelector('.temp')
 const humidity = document.querySelector('.humidity')
@@ -57,8 +58,13 @@ const checkWeather = async (city) => {
 
 }
 
+searchBar.addEventListener('keydown',(e)=>{
+    if(e.key==='Enter')
+    {
+        checkWeather(searchBar.value)
+    }
+})
 
 searchBtn.addEventListener('click',()=>{
-    city=searchBar.value;
-    checkWeather(city)
+    checkWeather(searchBar.value)
 })
