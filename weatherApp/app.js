@@ -1,6 +1,6 @@
 import obj from "./fig.js";
 
-const api_key = obj.apiKey;
+const api_key = process.env.API_KEY;
 
 const temp = document.querySelector('.temp')
 const humidity = document.querySelector('.humidity')
