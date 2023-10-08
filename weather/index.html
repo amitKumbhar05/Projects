@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body class="flex justify-center my-[8%] font-Poppins">
+    <div
+      class="card lg:w-[30%] rounded-2xl bg-gray-900 flex flex-col items-center"
+    >
+
+
+      <div class="search pt-10 flex text-black justify-between py-5">
+        <input
+          class="placeholder:text-black placeholder:text-lg text-lg text-black text-center rounded-2xl mr-3 px-5"
+          type="text"
+          placeholder="Enter City Name "
+          spellcheck="false"
+        />
+
+        <button class="">
+          <img
+            class="h-12 w-12 self-center p-4 bg-white rounded-full"
+            src="images/search.png"
+            alt=""
+          />
+        </button>
+      </div>
+
+      <div class="error text-white font-bold text-lg pb-2">
+        <h1>Enter a valid city name</h1>
+      </div>
+
+
+      <div class="weather w-full">
+        <div class="icon flex justify-center">
+          <img class="weather-icon" src="images/clouds.png" alt="" />
+        </div>
+        <div class="data flex flex-col items-center text-white text-5xl">
+          <h1 class="temp">85°C</h1>
+          <h2 class="city text-4xl pt-3">New York</h2>
+        </div>
+        <div class="my-5 info flex justify-between w-full">
+          <div class="col flex w-full space-x-5 items-center text-white pl-5">
+            <img class="h-7" src="images/humidity.png" alt="" />
+            <div>
+              <h1 class="humidity text-center text-lg font-bold">48%</h1>
+              <p>humidity</p>
+            </div>
+          </div>
+          <div
+            class="col flex w-full space-x-5 items-center text-white justify-end pr-5"
+          >
+            <img class="h-7" src="images/wind.png" alt="" />
+            <div>
+              <h1 class="wind text-lg font-bold">10 km/h</h1>
+              <p>wind speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
