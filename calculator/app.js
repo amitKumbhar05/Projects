@@ -56,7 +56,7 @@ const bck = ()=>{
 
 const btnani = (b) =>{
     setTimeout(()=>{
-        b.style.transform = "translateY(0)";
+        b.style = "";
         },50 )
         b.style.transform = "translateY(10px)";
 }
