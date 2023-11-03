@@ -20,3 +20,5 @@
 ![Digital Clock](images/Quotes.png)
 # 10.Create Element
 ![Digital Clock](images/Contact.png)
+# 10.Theme Change
+![Digital Clock](images/Theme-Change.png)
